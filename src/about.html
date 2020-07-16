@@ -1,0 +1,57 @@
+---
+layout: default
+title: About
+beginner: <span class="iconify" data-icon="bi:heart-fill" data-inline="false"></span><span class="iconify" data-icon="bi:heart" data-inline="false"></span><span class="iconify" data-icon="bi:heart" data-inline="false"></span>
+comfortable: <span class="iconify" data-icon="bi:heart-fill" data-inline="false"></span><span class="iconify" data-icon="bi:heart-half" data-inline="false"></span><span class="iconify" data-icon="bi:heart" data-inline="false"></span>
+intermediate: <span class="iconify" data-icon="bi:heart-fill" data-inline="false"></span><span class="iconify" data-icon="bi:heart-fill" data-inline="false"></span><span class="iconify" data-icon="bi:heart" data-inline="false"></span>
+expert: <span class="iconify" data-icon="bi:heart-fill" data-inline="false"></span><span class="iconify" data-icon="bi:heart-fill" data-inline="false"></span><span class="iconify" data-icon="bi:heart-fill" data-inline="false"></span>
+---
+<div>
+    <h1 class="text-center">Bio</h1>
+    <p>
+        A little about me; I am finishing up my final courses of my undergraduate degree at the University of Toronto. 
+        I am pursuing an Arts & Science Degree in Computer Science with a specialization in Software Engineering.
+        My main interests within the professional field of Computer Science and Software Development are in cybersecurity, backend development, and deployment.
+    </p>
+</div>
+<div>
+    <h1 class="text-center">Tools</h1>
+    <p>
+        The following list shows all the tools and technologies that I have used throughout the years. 
+        Each tool/technology has been annotated with a skill level according to the following legend:
+    </p>
+    <ul>
+        <li>
+            Beginner: {{ page.beginner }}
+        </li>
+        <li>
+            Comfortable: {{ page.comfortable }}
+        </li>
+        <li>
+            Intermediate: {{ page.intermediate }}
+        <li>
+            Expert: {{ page.expert }}
+        </li>
+    </ul>  
+    <div class="container">
+        {% for item in site.data.tools %}
+            <div class="row">
+                <div class="col-sm">
+                        <span class="iconify" data-icon="{{ item.icon }}" data-inline="false"></span> {{ item.name }}
+                </div>
+                <div class="col-sm">
+                    {% case item.skill %}
+                        {% when "beginner" %} 
+                            {{ page.beginner }} 
+                        {% when "comfortable" %} 
+                            {{ page.comfortable }} 
+                        {% when "intermediate" %} 
+                            {{ page.intermediate }} 
+                        {% else %} 
+                            {{ page.expert }} 
+                    {% endcase %}
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>

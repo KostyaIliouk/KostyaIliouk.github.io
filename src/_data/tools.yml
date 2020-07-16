@@ -1,0 +1,12 @@
+- name: Python
+  icon: logos:python
+  skill: intermediate
+- name: Java
+  icon: logos:java
+  skill: intermediate
+- name: C
+  icon: logos:c
+  skill: intermediate
+- name: Javascript
+  icon: logos:javascript
+  skill: intermediate
