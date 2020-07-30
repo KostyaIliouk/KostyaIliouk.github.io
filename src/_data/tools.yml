@@ -10,3 +10,48 @@
 - name: Javascript
   icon: logos:javascript
   skill: intermediate
+- name: Perl
+  icon: logos:perl
+  skill: beginner
+- name: Ruby
+  icon: logos:ruby
+  skill: beginner
+- name: Haskell
+  icon: logos:haskell-icon
+  skill: comfortable
+- name: Scheme
+  icon: mdi:lambda
+  skill: comfortable
+- name: Visual Basic
+  icon: 
+  skill: comfortable
+- name: Assembly
+  icon: 
+  skill: beginner
+- name: HTML
+  icon: dashicons:html
+  skill: comfortable
+- name: CSS
+  icon: vaadin:css
+  skill: comfortable
+- name: SQL
+  icon: carbon:sql
+  skill: comfortable
+- name: MongoDB
+  icon: cib:mongodb
+  skill: comfortable
+- name: Neo4J
+  icon: logos:neo4j
+  skill: comfortable
+- name: Redis
+  icon: logos:redis
+  skill: comfortable
+- name: Docker
+  icon: logos:docker-icon
+  skill: comfortable
+- name: Nginx
+  icon: cib:nginx
+  skill: comfortable
+- name: LetsEncrypt
+  icon: logos:letsencrypt
+  skill: comfortable

@@ -1,0 +1,62 @@
+- employer: Royal Bank of Canada
+  date: 
+    start: 9/10/18
+    end: 4/26/19
+  department: Technology and Operations, Reporting Shared Services
+  team: Cognos Disclosure Management
+  rolename: Data Analyst (Co-op)
+  manager:
+    name: Claude Zhang
+    email: claude.zhang @ rbc.com
+  description:
+    task1: Maintained and edited high profile reports - such as the Earnings Release, Report to Shareholders, etc. - ensuring proper governance is being followed.
+    task2: Cognos Disclosure Management (CDM) was used as the primary tool for report maintenance. CDM can be considered as an extension of Microsoft Office that adds variable declaration and use functionality.
+    task3: Created automation scripts using Visual Basic for excel and word.
+    task4: Created a project management and reporting system - using CDM - that generated progress reports which were then distributed to upper management on a weekly basis. This solution saved our internal client 260 hours annually - in turn attracting other internal clients to a total time savings of over 600 hours annually if adopted.
+
+- employer: Ministry of Education
+  date:
+    start: 9/5/17
+    end: 12/15/17
+  department: Data Collection & Decision Support Solutions
+  team: Architecture & Quality Assurance
+  rolename: Quality Assurance (Co-op)
+  manager:
+    name: Rahim Pira
+    email: rahim.pira @ ontario.ca
+  description:
+    task1: Maintained HP ALM - testing and defect management software - database by adding users, creating new schemas, reverting edits, etc.
+    task2: Helped edit and proofread the annual Architecture & Quality Assurance Manual that is distributed to internal clients that demonstrates our team's governance protocols and best practices.
+    task3: Coordinated the Accessbility of Ontarians with Disabilities Act (AODA) Cluster Task Force meetings; created the presentation deck to be shown and in charge of taking and distributing meeting minutes.
+    task4: Helped to develop a SharePoint website for internal client use.
+    task5: Completed AODA testing for documents that would be given to any internal clients.
+    task6: Created analysis scripts using Visual Basic for license use evaluation. The scripts were meant to identify certain moments within the year that were low on available licenses. These discoveries were later used to create business cases for purchasing more licenses.
+
+- employer: The Keg Steakhouse and Bar
+  date: 
+    start: 5/10/18
+    end: current
+  department: Richmond Hill
+  team: Front of House
+  rolename: Dinning Server
+  manager:
+    name: William Wilmot
+    email: n/a
+  description:
+    task1: Ensure all guests have the true Keg experience, from the service to quality checking any food and drinks that reach the guest.
+
+
+- employer: The Keg Steakhouse and Bar
+  date:
+    start: 7/31/14
+    end: 5/10/18
+  department: Richmond Hill
+  team: Front of House
+  rolename: Head Host
+  manager: 
+    name: William Wilmot
+    email: n/a
+  description:
+    task1: Managed seating of the 61 table dinning room. Between walk-ins and reservations, able to fit 400 to 500 guests through the dinning room in a busy working day.
+    task2: Took and organized reservations to ensure all asked requests were handled properly. 
+    task3: Answered the phone and dealt with inquiries about the restaurant to any potential guests.
