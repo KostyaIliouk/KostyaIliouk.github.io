@@ -1,0 +1,85 @@
+- name: Operating Systems
+  code: CSCC69
+  taught: University of Toronto
+  description:
+    task1: Separation between application layer, operating system and hardware.
+    task2: Process creation and memory layout.
+    task3: System call management.
+    task4: Locks, Semaphores, Monitors, Messages for process communication.
+    task5: Process scheduling and memory management. 
+    task6: Secondary storage management. 
+    task7: Deadlock and softlock management. 
+- name: Social and Information Networks
+  code: CSCC46
+  taught: University of Toronto
+  description:
+    task1: World Wide Web structure.
+    task2: Gnp & other models.
+    task3: Node connectivity; strength of ties and graph partitioning.
+    task4: Signed network evaluation.
+    task5: Degrees of separtation.
+    task6: Power law distribution within human networks.
+    task7: Game Theory.
+    task8: Decision Cascades.
+    task9: Virality.
+    task10: Voting.
+- name: Algorithm Design and Analysis
+  code: CSCC73
+  taught: University of Toronto
+  description:
+    task1: Greedy algorithms and their complexity.
+    task2: Dynamic programming, memoization, and their complexity.
+    task3: Max flow algorithm and it's uses.
+    task4: Linear programming and its complexity.
+- name: Programming on the Web
+  code: CSCC09
+  taught: University of Toronto
+  description: 
+    task1: Vanilla Javascript, HTML, and CSS.
+    task5: Asynchronous Javascript development. 
+    task2: Node.JS backend server development.
+    task3: Deployment strategies.
+    task4: Scaling strategies.
+- name: Computability and Computational Complexity
+  code: CSCC63
+  taught: University of Toronto
+  description:
+    task1: Turing Machines
+    task2: Recognizability and co-recognizability
+    task3: P vs NP
+    task4: Mapping reductions
+    task5: Complete and Intermediate problems
+- name: Computer and Network Security
+  code: CSCD27
+  taught: University of Toronto
+  description:
+    task1: Risk management and risk triaging.
+    task2: Classical cryptography; caesar, substitution, polyalphabetic, otp, etc.
+    task3: Symmetric and asymmetric encryption.
+    task4: Hash algorithms.
+    task5: Network protocol security.
+    task6: Human authentication & authorization.
+    task7: Operating system security.
+    task8: Program hijacking and malicious code.
+    task9: Web security; CORS, sessions, etc.
+- name: Artifical Intelligence
+  code: CSCD84
+  taught: University of Toronto
+  description:
+    task1: Search algorithms; best first search, A*, page rank, etc.
+    task2: Constraint satisfaction.
+    task3: Local search & deterministic annealing.
+    task4: Two-player adversarial games.
+    task5: MiniMax & alternations.
+    task6: Reinforcement learning, Markov Decision Process, Q-learning.
+    task6: Bayesian Network, Neural Networks.
+    task7: Many of the above topics were implemented on a pacman or image recognition program using C.
+- name: Engineering Large Software Systems
+  code: CSCD01
+  taught: University of Toronto
+  description: 
+    task1: Architecture modeling and differences.
+    task2: Software processes and development processes.
+    task3: Agile development differences.
+    task4: UML modeling. 
+    task5: Design patterns.

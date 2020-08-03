@@ -34,29 +34,16 @@
 
 - employer: The Keg Steakhouse and Bar
   date: 
-    start: 5/10/18
+    start: 7/31/14
     end: current
   department: Richmond Hill
   team: Front of House
-  rolename: Dinning Server
+  rolename: Dinning Server & Head Host
   manager:
     name: William Wilmot
     email: n/a
   description:
-    task1: Ensure all guests have the true Keg experience, from the service to quality checking any food and drinks that reach the guest.
-
-
-- employer: The Keg Steakhouse and Bar
-  date:
-    start: 7/31/14
-    end: 5/10/18
-  department: Richmond Hill
-  team: Front of House
-  rolename: Head Host
-  manager: 
-    name: William Wilmot
-    email: n/a
-  description:
+    task0: Ensure all guests have the true Keg experience, from the service to quality checking any food and drinks that reach the guest.
     task1: Managed seating of the 61 table dinning room. Between walk-ins and reservations, able to fit 400 to 500 guests through the dinning room in a busy working day.
     task2: Took and organized reservations to ensure all asked requests were handled properly. 
     task3: Answered the phone and dealt with inquiries about the restaurant to any potential guests.
