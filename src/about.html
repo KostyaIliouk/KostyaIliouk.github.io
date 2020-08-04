@@ -8,6 +8,7 @@ expert: <span class="iconify" data-icon="bi:heart-fill" data-inline="false"></sp
 ---
 <div class="container">
 
+    <!-- bio section -->
     <div class="row">
         <div class="col-sm">
             <h1 class="text-center">Bio</h1>
@@ -19,12 +20,13 @@ expert: <span class="iconify" data-icon="bi:heart-fill" data-inline="false"></sp
         </div>
     </div>
 
+    <!-- tools section -->
     <div class="row">
         <div class="col-sm">
-            <h1 class="text-center">Tools</h1>
+            <h1 class="text-center">Tools </h1>
             <p>
                 The following list shows all the tools and technologies that I have used throughout the years. 
-                Each tool/technology has been annotated with a skill level according to the following legend:
+                Each tool has been annotated with a skill level according to the following legend:
             </p>
             <ul>
                 <li>
@@ -41,7 +43,6 @@ expert: <span class="iconify" data-icon="bi:heart-fill" data-inline="false"></sp
             </ul>  
         </div>
     </div>
-
     {% for item in site.data.tools %}
     <div class="row">
         <div class="col-sm">
@@ -64,7 +65,6 @@ expert: <span class="iconify" data-icon="bi:heart-fill" data-inline="false"></sp
         </div>
     </div>
     {% endfor %}
-
     <div class="row">
         <div class="col-sm">
             <p class="mt-2">
@@ -73,12 +73,12 @@ expert: <span class="iconify" data-icon="bi:heart-fill" data-inline="false"></sp
         </div>
     </div>
 
+    <!-- work section -->
     <div class="row">
         <div class="col-sm">
             <h1 class="text-center">Work Experience</h1>
         </div>
     </div>    
-
     {% for item in site.data.workexperience %}
     <div class="row">
         <div class="col-sm">
@@ -124,6 +124,7 @@ expert: <span class="iconify" data-icon="bi:heart-fill" data-inline="false"></sp
     </div>
     {% endfor %}
 
+    <!-- academic/courses section -->
     <div class="row">
         <div class="col-sm">
             <h1 class="text-center">Academic Experience</h1>
@@ -156,6 +157,7 @@ expert: <span class="iconify" data-icon="bi:heart-fill" data-inline="false"></sp
     </div>
     {% endfor %}
 
+    <!-- projects section, to be moved to own tab later on -->
     <div class="row">
         <div class="col-sm">
             <h1 class="text-center">Notable Projects</h1>

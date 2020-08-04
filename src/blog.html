@@ -2,12 +2,31 @@
 layout: default
 title: Blog
 ---
-<h1>Latest Posts</h1>
-<ul>
-    {% for post in site.posts %}
-        <li>
-            <h2> <a href="{{ post.url }}"> {{ post.title }} </a></h2>
+<div class="container">
+    <div class="row">
+        <div class="col-sm">
+            <h1>Blog</h1>
+        </div>
+    </div>
+
+    <!-- random posts section -->
+    <div class="row">
+        <div class="col-sm">
+            <h2>Random Tidbits</h2>
+        </div>
+    </div>
+    {% assign random_posts = site.posts | where:"topic","random" %}
+    {% for post in random_posts %}
+    <div class="row">
+        <div class="col-sm">
+            <h3> <a href="{{ post.url }}"> {{ post.title }} </a></h3>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm">
             {{ post.excerpt }}
-        </li>
+        </div>
+    </div>
     {% endfor %}
-</ul>
+
+</div>
