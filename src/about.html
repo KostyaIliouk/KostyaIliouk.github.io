@@ -6,184 +6,227 @@ comfortable: <span class="iconify" data-icon="bi:heart-fill" data-inline="false"
 intermediate: <span class="iconify" data-icon="bi:heart-fill" data-inline="false"></span><span class="iconify" data-icon="bi:heart-fill" data-inline="false"></span><span class="iconify" data-icon="bi:heart-fill" data-inline="false"></span><span class="iconify" data-icon="bi:heart" data-inline="false"></span>
 expert: <span class="iconify" data-icon="bi:heart-fill" data-inline="false"></span><span class="iconify" data-icon="bi:heart-fill" data-inline="false"></span><span class="iconify" data-icon="bi:heart-fill" data-inline="false"></span><span class="iconify" data-icon="bi:heart-fill" data-inline="false"></span>
 ---
-<div class="container">
-
-    <!-- bio section -->
-    <div class="row">
-        <div class="col-sm">
-            <h1 class="text-center">Bio</h1>
-            <p>
-                A little about me; I am finishing up my final courses of my undergraduate degree at the University of Toronto. 
-                I am pursuing an Arts & Science Degree in Computer Science with a specialization in Software Engineering.
-                My main interests within the professional field of Computer Science and Software Development are in cybersecurity, backend development, and deployment strategies.
-            </p>
-        </div>
+<!-- bio section -->
+<div class="card">
+    <div class="card-body">
+    <h2 class="card-title text-center">Kanstantsin Ilioukevitch ~ Bio</h2>
+    <p class="cart-text">
+        A little about me; I am finishing up my final courses of my undergraduate degree at the University of Toronto. 
+        I am pursuing an Arts & Science Degree in Computer Science with a specialization in Software Engineering.
+        My main interests within the professional field of Computer Science and Software Development are in cybersecurity, backend development, and deployment strategies.
+    </p>
     </div>
-
-    <!-- tools section -->
-    <div class="row">
-        <div class="col-sm">
-            <h1 class="text-center">Tools </h1>
-            <p>
-                The following list shows all the tools and technologies that I have used throughout the years. 
-                Each tool has been annotated with a skill level according to the following legend:
-            </p>
-            <ul>
-                <li>
-                    Beginner: {{ page.beginner }}
-                </li>
-                <li>
-                    Comfortable: {{ page.comfortable }}
-                </li>
-                <li>
-                    Intermediate: {{ page.intermediate }}
-                <li>
-                    Expert: {{ page.expert }}
-                </li>
-            </ul>  
-        </div>
-    </div>
-    {% for item in site.data.tools %}
-    <div class="row">
-        <div class="col-sm">
-                <span class="iconify" data-icon="{{ item.icon }}" data-inline="false"></span>
-        </div>
-        <div class="col-sm">
-                {{ item.name }}
-        </div>
-        <div class="col-sm">
-            {% case item.skill %}
-                {% when "beginner" %} 
-                    {{ page.beginner }} 
-                {% when "comfortable" %} 
-                    {{ page.comfortable }} 
-                {% when "intermediate" %} 
-                    {{ page.intermediate }} 
-                {% when "expert" %} 
-                    {{ page.expert }} 
-            {% endcase %}
-        </div>
-    </div>
-    {% endfor %}
-    <div class="row">
-        <div class="col-sm">
-            <p class="mt-2">
-                I have decided to leave out frameworks to minimize the length of the list, but a more detailed list of frameworks for a specific language can be provided if asked.
-            </p>
-        </div>
-    </div>
-
-    <!-- work section -->
-    <div class="row">
-        <div class="col-sm">
-            <h1 class="text-center">Work Experience</h1>
-        </div>
-    </div>    
-    {% for item in site.data.workexperience %}
-    <div class="row">
-        <div class="col-sm">
-            {{ item.employer }}
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-sm">
-            {{ item.department }}
-        </div>
-        <div class="col-sm">
-            {{ item.team }}
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-sm">
-            Manager: {{ item.manager.name }}
-        </div>
-        <div class="col-sm">
-            {% if item.manager.email != 'n/a' %}
-                Email: {{ item.manager.email }}
-            {% endif %}
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-sm">
-            {{ item.rolename }}
-        </div>
-        <div class="col">
-            {{ item.date.start }} - {{ item.date.end }}
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-sm">
-                <ul>
-                    {% for task in item.description %}
-                        <li>
-                            {{ task[1] }}
-                        </li>
-                    {% endfor %}
-                </ul>
-        </div>
-    </div>
-    {% endfor %}
-
-    <!-- academic/courses section -->
-    <div class="row">
-        <div class="col-sm">
-            <h1 class="text-center">Academic Experience</h1>
-        </div>
-    </div>
-    {% for course in site.data.academicexperience %}
-    <div class="row">
-        <div class="col-sm">
-            {{ course.name }}
-        </div>
-        <div class="col-sm">
-            {{ course.code }}
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-sm">
-            {{ course.taught }}
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-sm">
-            <ul>
-                {% for item in course.description %}
-                    <li>
-                        {{ item[1] }}
-                    </li>
-                {% endfor %}
-            </ul>                    
-        </div>
-    </div>
-    {% endfor %}
-
-    <!-- projects section, to be moved to own tab later on -->
-    <div class="row">
-        <div class="col-sm">
-            <h1 class="text-center">Notable Projects</h1>
-        </div>
-    </div>
-    {% for project in site.data.projects %}
-    <div class="row">
-        <div class="col-sm">
-            {{ project.name }}
-        </div>
-        <div class="col-sm">
-            {% if project.link != "n/a"%}
-                {{ project.link }}
-            {% endif %}
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-sm">
-            source: {{ project.source }}
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-sm">
-            {{ project.description }}
-        </div>
-    </div>
-    {% endfor %}
-
 </div>
+
+<!-- tools section -->
+<div class="card">
+    <div class="card-body">
+        <h2 class="card-title text-center">Tools </h2>
+        <p class="card-text">
+            The following list shows all the tools and technologies that I have used throughout the years. 
+            Each tool has been annotated with a skill level according to the following legend:
+        </p>
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="card " style="width: 17rem">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">
+                            <div class="row">
+                                <div class="col-sm">
+                                        Beginner:
+                                </div>
+                                <div class="col-sm">
+                                    {{ page.beginner }}
+                                </div>
+                            </div>
+                        </li>
+                        <li class="list-group-item">
+                            <div class="row">
+                                <div class="col-sm">
+                                    Comfortable:
+                                </div>
+                                <div class="col-sm">
+                                    {{ page.comfortable }}
+                                </div>
+                            </div>
+                        </li>
+                        <li class="list-group-item">
+                            <div class="row">
+                                <div class="col-sm">
+                                    Intermediate:
+                                </div>
+                                <div class="col-sm">
+                                    {{ page.intermediate }}
+                                </div>
+                            </div>
+                        <li class="list-group-item">
+                            <div class="row">
+                                <div class="col-sm">
+                                    Expert:
+                                </div>
+                                <div class="col-sm">
+                                    {{ page.expert }}
+                                </div>
+                            </div>
+                        </li>
+                    </ul> 
+                </div>
+            </div>
+        </div>
+        <p class="card-text">
+            Clicking on an item will expand any additional frameworks that I am familiar with in relations to the corresponding tool.
+        </p>
+    </div>
+    <!-- TODO: collapsable list group items to show frameworks that I have used before-->
+    <div class="card-body container">
+        <ul class="list-group list-group-flush">
+            {% for item in site.data.tools %}
+            <li class="list-group-item">
+                <div class="row">
+                    <div class="col-sm">
+                        <span class="iconify" data-icon="{{ item.icon }}" data-inline="false"></span>
+                    </div>
+                    <div class="col-sm">
+                            {{ item.name }}
+                    </div>
+                    <div class="col-sm">
+                        {% case item.skill %}
+                            {% when "beginner" %} 
+                                {{ page.beginner }} 
+                            {% when "comfortable" %} 
+                                {{ page.comfortable }} 
+                            {% when "intermediate" %} 
+                                {{ page.intermediate }} 
+                            {% when "expert" %} 
+                                {{ page.expert }} 
+                        {% endcase %}
+                    </div>
+                </div>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>
+
+<!-- work section -->
+<div class="card">
+    <div class="card-body">
+        <h2 class="text-center car-title">Work Experience</h2>
+    </div>
+    <div class="container justify-content-center">
+        {% for item in site.data.workexperience %}
+        <div class="row">
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title text-center">
+                        {{ item.employer }}
+                    </h3>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-sm">
+                            {{ item.department }}
+                        </div>
+                        <div class="col-sm">
+                            {{ item.team }}
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm">
+                            Manager: {{ item.manager.name }}
+                        </div>
+                        <div class="col-sm">
+                            {% if item.manager.email != 'n/a' %}
+                                Email: {{ item.manager.email }}
+                            {% endif %}
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm">
+                            {{ item.rolename }}
+                        </div>
+                        <div class="col">
+                            {{ item.date.start }} - {{ item.date.end }}
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm">
+                            <hr>
+                            <ul class="list-group list-group-flush">
+                                {% for task in item.description %}
+                                    <li class="list-group-item">
+                                        {{ task[1] }}
+                                    </li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+<!-- academic/courses section -->
+<div class="row">
+    <div class="col-sm">
+        <h1 class="text-center">Academic Experience</h1>
+    </div>
+</div>
+{% for course in site.data.academicexperience %}
+<div class="row">
+    <div class="col-sm">
+        {{ course.name }}
+    </div>
+    <div class="col-sm">
+        {{ course.code }}
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm">
+        {{ course.taught }}
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm">
+        <ul>
+            {% for item in course.description %}
+                <li>
+                    {{ item[1] }}
+                </li>
+            {% endfor %}
+        </ul>                    
+    </div>
+</div>
+{% endfor %}
+
+<!-- projects section, to be moved to own tab later on -->
+<div class="row">
+    <div class="col-sm">
+        <h1 class="text-center">Notable Projects</h1>
+    </div>
+</div>
+{% for project in site.data.projects %}
+<div class="row">
+    <div class="col-sm">
+        {{ project.name }}
+    </div>
+    <div class="col-sm">
+        {% if project.link != "n/a"%}
+            {{ project.link }}
+        {% endif %}
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm">
+        source: {{ project.source }}
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm">
+        {{ project.description }}
+    </div>
+</div>
+{% endfor %}
