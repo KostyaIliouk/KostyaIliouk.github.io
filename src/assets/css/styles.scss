@@ -1,3 +1,8 @@
 ---
 ---
-@import "main";
+
+#aboutContent{
+    position: relative;
+    height: 350px; 
+    overflow-y: scroll;
+}

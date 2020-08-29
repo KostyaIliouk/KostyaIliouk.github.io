@@ -1,8 +1,8 @@
 - name: Trendmap
   link: n/a
-  source: github.com/KostyaIliouk/project-the-holy-trinity-of-javascript
+  source: https://github.com/KostyaIliouk/project-the-holy-trinity-of-javascript
   description: A desktop web app for getting the most recent news stories for each country. Users can explore an interactive map and click on any country to get the most recent news for that country. News headlines and articles will be gathered from trusted local and global news websites as well as their respected subreddit.
-- name: NO NAME YET
-  link: NO LINK YET
-  source: IDK IF I SHOULD MAKE THIS PUBLIC YET
-  description: Personal website with two purposes. Firstly, a detailed CV for anyone interested in reading more about me. Secondly, a personal blog filled with rambling, tutorials, and random things that I find cool.
+- name: CV Blog
+  link: n/a
+  source: n/a
+  description: Personal website with two purposes. Firstly, a detailed CV for anyone interested in reading more about me. Secondly, a personal blog filled with rambling, tutorials, and other random things that I find cool.
