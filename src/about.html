@@ -46,14 +46,14 @@ expert: <span class="iconify" data-icon="bi:heart-fill" data-inline="false"></sp
     </div>
 
     <!-- tools section -->
-    <div id="tools" class="card about">
+    <div id="tools" class="card about pb-4">
         <div class="card-body">
             <h2 class="card-title text-center">Tools </h2>
             <p class="card-text">
                 The following list shows all the tools and technologies that I have used throughout the years. 
                 Each tool has been annotated with a skill level according to the following legend:
             </p>
-            <div class="container">
+            <div class="container mb-4">
                 <div class="row justify-content-center">
                     <div class="card " style="width: 17rem">
                         <ul class="list-group list-group-flush">
@@ -104,11 +104,12 @@ expert: <span class="iconify" data-icon="bi:heart-fill" data-inline="false"></sp
                 Clicking on an item will expand any additional frameworks that I am familiar with in relations to the corresponding tool.
             </p>
         </div>
-        <!-- TODO: collapsable list group items to show frameworks that I have used before-->
-        <div class="card-body container">
-            <ul class="list-group list-group-flush">
-                {% for item in site.data.tools %}
-                <li class="list-group-item">
+        <div id="toolsAccordion" class="accordion">
+            <div class="container justify-content-center">
+            {% for item in site.data.tools %}
+            <div class="card mx-5">
+                <div class="card-header text-center" id="heading{{ forloop.index }}">
+                    {% if item.framework == true %}<button class="btn btn-link btn-block collapsed p-0" type="button" data-toggle="collapse" data-target="#collapse{{ forloop.index }}" aria-expanded="false" aria-controls="collapse{{ forloop.index }}">{% endif%}
                     <div class="row">
                         <div class="col-sm">
                             <span class="iconify" data-icon="{{ item.icon }}" data-inline="false"></span>
@@ -129,9 +130,24 @@ expert: <span class="iconify" data-icon="bi:heart-fill" data-inline="false"></sp
                             {% endcase %}
                         </div>
                     </div>
-                </li>
-                {% endfor %}
-            </ul>
+                    {% if item.framework == true %}</button>{% endif %}
+                </div>
+                {% if item.framework == true %}
+                <div id="collapse{{ forloop.index }}" class="collapse" aria-labelledby="heading{{ forloop.index }}" data-parent="#toolsAccordion">
+                    <div class="card-body">
+                        <ul class="list-group list-group-flush">
+                            {% for framework in item.framework_list %}
+                            <li class="list-group-item">
+                                {{ framework[1] }}
+                            </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+                {% endif %}
+            </div>
+            {% endfor %}
+            </div>
         </div>
     </div>
 
