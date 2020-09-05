@@ -2,39 +2,34 @@
 layout: default
 title: Blog
 ---
-<div class="container-fluid">
 
-    <div class="row justify-content-center my-4">
-        <h1> Kostya's Random Ramblings</h1>
-    </div>
+<h1 class="text-center mt-2"> Kostya's Random Ramblings</h1>
 
-    <div class="row pl-3">
-        <h2>New Posts</h2>
-    </div>
-    <div class="row">
-        <!-- TODO: find a way to display only 3 recent posts, can use the 'limit' filter -->
-        <!-- want to make at most 3 cards of the most recent posts -->
-        <!-- each card will have a title and the date posted -->
-
-    </div>
-
-    <!-- for each section -->
-
-    {% for section in site.data.blogsections %}
-        {% assign sectionPosts = site.posts | where: "topic", section.name %}
-        {% if sectionPosts.size > 0 %}
-    <div class="row pl-3">
-        <h2>{{section.name}}</h2> <!-- need to make this a hyperlinked name for section page with all posts-->
-    </div>
-    <div class="card-deck">
-
-    </div>
-        {% endif %}
-    {% endfor %}
-
-    <!-- EXAMPLE OF FILTERING POSTS 
-    {% assign random_posts = site.posts | where:"topic","random" %}
-    -->
-
-
+<div class="pl-3">
+    <h2>New Posts</h2>
 </div>
+
+{% include newPosts.html %}
+
+{% for section in site.data.blogsections %}
+    {% assign sectionPosts = site.posts | where: "topic", section.name %}
+    {% if sectionPosts.size > 0 %}
+<div class="pl-3 mt-3">
+    {% capture link %}{{section.name | downcase}}.html{% endcapture %}
+    <a href= {{link}} ><h2>{{section.name}}</h2></a>
+</div>
+<div class="card-deck mx-3">
+    {% for post in sectionPosts limit:3 %}
+    <div class="card">
+        <div class="card-body">
+            <a href={{post.url}}><h4 class="card-title">{{post.title}}</h4></a>
+            <p>{{post.excerpt | truncatewords: 75}}</p>
+        </div>
+        <div class="card-footer">
+            <small class="text-muted">{{post.date | date: "%a, %b %d, %y"}}</small>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+    {% endif %}
+{% endfor %}

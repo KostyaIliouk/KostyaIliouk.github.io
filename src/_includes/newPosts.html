@@ -1,0 +1,13 @@
+<div class="card-deck mx-3">
+    {% for post in site.posts limit:3 %}
+    <div class="card">
+        <div class="card-body">
+            <a href={{post.url}}><h4 class="card-title">{{post.title}}</h4></a>
+            <p>{{post.excerpt | truncatewords: 75}}</p>
+        </div>
+        <div class="card-footer">
+            <small class="text-muted">{{post.date | date: "%a, %b %d, %y"}}</small>
+        </div>
+    </div>
+    {% endfor %}
+</div>

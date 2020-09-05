@@ -1,0 +1,26 @@
+---
+layout: default
+---
+<nav aria-label="breadcrumb sticky-top">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="blog.html">Blog</a></li>
+        <li class="breadcrumb-item active" aria-current="page">{{page.section}}</li>
+    </ol>
+</nav>
+
+<h1 class="text-center mt-3">{{page.section}}</h1> <!-- need to make this a hyperlinked name for section page with all posts-->
+
+<div class="card-deck mx-3">
+    {% assign sectionPosts = site.posts | where: "topic", page.section %}
+    {% for post in sectionPosts %}
+    <div class="card">
+        <div class="card-body">
+            <a href={{post.url}}><h4 class="card-title">{{post.title}}</h4></a>
+            <p>{{post.excerpt | truncatewords: 75}}</p>
+        </div>
+        <div class="card-footer">
+            <small class="text-muted">{{post.date | date: "%a, %b %d, %y"}}</small>
+        </div>
+    </div>
+    {% endfor %}
+</div>
