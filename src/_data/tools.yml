@@ -47,12 +47,12 @@
   framework: false
 
 - name: Visual Basic
-  icon: 
+  icon: bi:x-circle
   skill: comfortable
   framework: false
 
 - name: Assembly
-  icon: 
+  icon: bi:x-circle
   skill: beginner
   framework: false
 
