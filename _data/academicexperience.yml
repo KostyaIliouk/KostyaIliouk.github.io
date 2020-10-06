@@ -14,7 +14,7 @@
   taught: University of Toronto
   description:
     task1: World Wide Web structure.
-    task2: Gnp & other models.
+    task2: Gnp and other models.
     task3: Node connectivity; strength of ties and graph partitioning.
     task4: Signed network evaluation.
     task5: Degrees of separtation.
@@ -29,7 +29,7 @@
   description:
     task1: Greedy algorithms and their complexity.
     task2: Dynamic programming, memoization, and their complexity.
-    task3: Max flow algorithm and it's uses.
+    task3: Max flow algorithm and its uses.
     task4: Linear programming and its complexity.
 - name: Programming on the Web
   code: CSCC09
@@ -44,11 +44,11 @@
   code: CSCC63
   taught: University of Toronto
   description:
-    task1: Turing Machines
-    task2: Recognizability and co-recognizability
-    task3: P vs NP
-    task4: Mapping reductions
-    task5: Complete and Intermediate problems
+    task1: Turing Machines.
+    task2: Recognizability and co-recognizability.
+    task3: P vs NP.
+    task4: Mapping reductions.
+    task5: Complete and Intermediate problems.
 - name: Computer and Network Security
   code: CSCD27
   taught: University of Toronto
@@ -58,7 +58,7 @@
     task3: Symmetric and asymmetric encryption.
     task4: Hash algorithms.
     task5: Network protocol security.
-    task6: Human authentication & authorization.
+    task6: Human authentication and authorization.
     task7: Operating system security.
     task8: Program hijacking and malicious code.
     task9: Web security; CORS, sessions, etc.
@@ -68,9 +68,9 @@
   description:
     task1: Search algorithms; best first search, A*, page rank, etc.
     task2: Constraint satisfaction.
-    task3: Local search & deterministic annealing.
+    task3: Local search and deterministic annealing.
     task4: Two-player adversarial games.
-    task5: MiniMax & alternations.
+    task5: MiniMax and alternations.
     task6: Reinforcement learning, Markov Decision Process, Q-learning.
     task6: Bayesian Network, Neural Networks.
     task7: Many of the above topics were implemented on a pacman or image recognition program using C.
