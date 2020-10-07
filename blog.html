@@ -15,7 +15,7 @@ title: Blog
     {% assign sectionPosts = site.posts | where: "topic", section.name %}
     {% if sectionPosts.size > 0 %}
 <div class="pl-3 mt-3">
-    {% capture link %}{{section.name | downcase}}.html{% endcapture %}
+    {% capture link %}{{section.name | downcase | replace: " ", ""}}.html{% endcapture %}
     <a href= {{link}} ><h2>{{section.name}}</h2></a>
 </div>
 <div class="card-deck mx-3">
