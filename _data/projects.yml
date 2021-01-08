@@ -6,7 +6,7 @@
   link: n/a
   source: n/a
   description: Personal website with two purposes. Firstly, a detailed CV for anyone interested in reading more about me. Secondly, a personal blog filled with rambling, tutorials, and other random things that I find cool.
-- name: Wedding Information Websited
-  link: TBD
+- name: Wedding Information Website
+  link: n/a
   source: https://github.com/KostyaIliouk/lorneandkate
   description: A website hosting information for my family member's wedding. After showing them multiple options, they opted for a fully static website that would be used to link between information for different events, as well as, their registry.
