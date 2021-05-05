@@ -99,3 +99,15 @@
     task9: Application Layer Protocols.
     task10: Software Defined Networks.
     task11: Network Security.
+- name: Database System Technology
+  code: CSCD43
+  taught: University of Toronto
+  description:
+    task1: Buffer Management.
+    task2: Record and File Structuring.
+    task3: Indexes.
+    task4: External Sorting.
+    task5: Evaluation of Relational Operators.
+    task6: Relation Query Optimizers.
+    task7: Concurrency Control
+    task8: Crash Recovery
