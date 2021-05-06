@@ -6,11 +6,11 @@
     - name: Django
       icon: logos:django-icon
     - name: Matplotlib
-      icon: testing
+      icon: n/a
     - name: Numpy
       icon: logos:numpy
     - name: Metasploit
-      icon: testing
+      icon: n/a
 
 - name: Java
   icon: logos:java
@@ -32,8 +32,8 @@
   framework_list:
     - name: Node.js
       icon: logos:nodejs-icon
-    - name: React
-      icon: logos:react
+    - name: React Bootstrap
+      icon: n/a
 
 - name: Perl
   icon: logos:perl
@@ -59,18 +59,18 @@
   framework: false
 
 - name: Visual Basic
-  icon: bi:x-circle
+  icon: n/a
   skill: comfortable
   framework: false
 
 - name: Assembly
-  icon: bi:x-circle
+  icon: n/a
   skill: beginner
   framework: false
 
 - name: HTML
   icon: dashicons:html
-  skill: comfortable
+  skill: intermediate
   framework: false
 
 - name: CSS
@@ -87,21 +87,21 @@
   framework: true
   framework_list:
     - name: mySQL
-      icon: testing
+      icon: logos:mysql
     - name: PostgreSQL
-      icon: testing
+      icon: logos:postgresql
 
 - name: noSQL
-  icon: bi:x-circle
+  icon: n/a
   skill: intermediate
   framework: true
   framework_list:
     - name: MongoDB
-      icon: testing
+      icon: logos:mongodb
     - name: Neo4J
-      icon: testing
+      icon: logos:neo4j
     - name: Redis
-      icon: testing
+      icon: logos:redis
 
 # - name: MongoDB
 #   icon: cib:mongodb
