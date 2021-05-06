@@ -5,6 +5,7 @@ beginner: <span class="iconify" data-icon="bi:heart-fill" data-inline="false"></
 comfortable: <span class="iconify" data-icon="bi:heart-fill" data-inline="false"></span><span class="iconify" data-icon="bi:heart-fill" data-inline="false"></span><span class="iconify" data-icon="bi:heart" data-inline="false"></span><span class="iconify" data-icon="bi:heart" data-inline="false"></span>
 intermediate: <span class="iconify" data-icon="bi:heart-fill" data-inline="false"></span><span class="iconify" data-icon="bi:heart-fill" data-inline="false"></span><span class="iconify" data-icon="bi:heart-fill" data-inline="false"></span><span class="iconify" data-icon="bi:heart" data-inline="false"></span>
 expert: <span class="iconify" data-icon="bi:heart-fill" data-inline="false"></span><span class="iconify" data-icon="bi:heart-fill" data-inline="false"></span><span class="iconify" data-icon="bi:heart-fill" data-inline="false"></span><span class="iconify" data-icon="bi:heart-fill" data-inline="false"></span>
+defaultIcon: <span class="iconify" data-icon="bi:x-circle" data-inline="false"></span>
 ---
 
 <nav id="cvNav" class="navbar navbar-expand-sm navbar-light bg-light sticky-top border-top">
@@ -52,7 +53,7 @@ expert: <span class="iconify" data-icon="bi:heart-fill" data-inline="false"></sp
                 The following list shows all the tools that I have used throughout the years. 
                 Each tool has been annotated with a skill level according to the following legend:
             </p>
-            <div class="container mb-4">
+            <div class="container mb-4"> <!-- legend -->
                 <div class="row justify-content-center">
                     <div class="card " style="width: 17rem">
                         <ul class="list-group list-group-flush">
@@ -111,7 +112,11 @@ expert: <span class="iconify" data-icon="bi:heart-fill" data-inline="false"></sp
                     {% if item.framework == true %}<button class="btn btn-link btn-block collapsed p-0" type="button" data-toggle="collapse" data-target="#collapse{{ forloop.index }}" aria-expanded="false" aria-controls="collapse{{ forloop.index }}">{% endif%}
                     <div class="row">
                         <div class="col-sm">
+                            {% if item.icon != "n/a" %}
                             <span class="iconify" data-icon="{{ item.icon }}" data-inline="false"></span>
+                            {% else %}
+                            {{ page.defaultIcon }}
+                            {% endif %}
                         </div>
                         <div class="col-sm">
                                 {{ item.name }}
@@ -137,7 +142,12 @@ expert: <span class="iconify" data-icon="bi:heart-fill" data-inline="false"></sp
                         <ul class="list-group list-group-flush">
                             {% for framework in item.framework_list %}
                             <li class="list-group-item">
-                                {{ framework[1] }}
+                                {% if framework.icon != "n/a" %}
+                                <span class="iconify" data-icon="{{ framework.icon }}" data-inline="false"></span>
+                                {% else %}
+                                {{ page.defaultIcon }}
+                                {% endif %}
+                                {{ framework.name }}
                             </li>
                             {% endfor %}
                         </ul>
