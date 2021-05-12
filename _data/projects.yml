@@ -3,10 +3,10 @@
   source: https://github.com/KostyaIliouk/project-the-holy-trinity-of-javascript
   description: A desktop web app for getting the most recent news stories for each country. Users can explore an interactive map and click on any country to get the most recent news for that country. News headlines and articles will be gathered from trusted local and global news websites as well as their respected subreddit.
 - name: CV Blog
+  link: https://kostyailiouk.github.io
+  source: https://github.com/KostyaIliouk/KostyaIliouk.github.io
+  description: Personal website with two purposes. Firstly, a detailed CV for anyone interested in reading more about me. Secondly, a personal blog filled with rambling, tutorials, and other random things that I find cool.
+- name: Wedding Information Website
   link: n/a
   source: n/a
-  description: Personal website with two purposes. Firstly, a detailed CV for anyone interested in reading more about me. Secondly, a personal blog filled with rambling, tutorials, and other random things that I find cool.
-- name: Wedding Information Websited
-  link: TBD
-  source: https://github.com/KostyaIliouk/lorneandkate
   description: A website hosting information for my family member's wedding. After showing them multiple options, they opted for a fully static website that would be used to link between information for different events, as well as, their registry.

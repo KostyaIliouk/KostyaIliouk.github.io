@@ -3,14 +3,22 @@
   skill: intermediate
   framework: true
   framework_list:
-    f1: Django
+    - name: Django
+      icon: logos:django-icon
+    - name: Matplotlib
+      icon: n/a
+    - name: Numpy
+      icon: logos:numpy
+    - name: Metasploit
+      icon: n/a
 
 - name: Java
   icon: logos:java
   skill: intermediate
   framework: true
   framework_list:
-    f1: Spring Boot
+    - name: Spring Boot
+      icon: bx:bxl-spring-boot
 
 - name: C
   icon: logos:c
@@ -22,7 +30,10 @@
   skill: intermediate
   framework: true
   framework_list:
-    f1: Node.js
+    - name: Node.js
+      icon: logos:nodejs-icon
+    - name: React Bootstrap
+      icon: n/a
 
 - name: Perl
   icon: logos:perl
@@ -34,7 +45,8 @@
   skill: beginner
   framework: true
   framework_list:
-    f1: Jekyll
+    - name: Jekyll
+      icon: logos:jekyll
 
 - name: Haskell
   icon: logos:haskell-icon
@@ -47,18 +59,18 @@
   framework: false
 
 - name: Visual Basic
-  icon: bi:x-circle
+  icon: n/a
   skill: comfortable
   framework: false
 
 - name: Assembly
-  icon: bi:x-circle
+  icon: n/a
   skill: beginner
   framework: false
 
 - name: HTML
   icon: dashicons:html
-  skill: comfortable
+  skill: intermediate
   framework: false
 
 - name: CSS
@@ -66,27 +78,45 @@
   skill: comfortable
   framework: true
   framework_list:
-    f1: SASS/SCSS
+    - name: SASS/SCSS
+      icon: logos:sass
 
 - name: SQL
   icon: carbon:sql
-  skill: comfortable
-  framework: false
+  skill: intermediate
+  framework: true
+  framework_list:
+    - name: mySQL
+      icon: logos:mysql
+    - name: PostgreSQL
+      icon: logos:postgresql
 
-- name: MongoDB
-  icon: cib:mongodb
-  skill: comfortable
-  framework: false
+- name: noSQL
+  icon: n/a
+  skill: intermediate
+  framework: true
+  framework_list:
+    - name: MongoDB
+      icon: logos:mongodb
+    - name: Neo4J
+      icon: logos:neo4j
+    - name: Redis
+      icon: logos:redis
 
-- name: Neo4J
-  icon: logos:neo4j
-  skill: comfortable
-  framework: false
+# - name: MongoDB
+#   icon: cib:mongodb
+#   skill: comfortable
+#   framework: false
 
-- name: Redis
-  icon: logos:redis
-  skill: comfortable
-  framework: false
+# - name: Neo4J
+#   icon: logos:neo4j
+#   skill: comfortable
+#   framework: false
+
+# - name: Redis
+#   icon: logos:redis
+#   skill: comfortable
+#   framework: false
 
 - name: Docker
   icon: logos:docker-icon

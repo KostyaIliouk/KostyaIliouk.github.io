@@ -84,3 +84,30 @@
     task4: UML modeling. 
     task5: Design patterns.
     task6: Contribute to open source projects.
+- name: Computer Networks
+  code: CSCD58
+  taught: University of Toronto
+  description: 
+    task1: OSI/Internet Model.
+    task2: Link Layer Protocols.
+    task3: Network Layer Protocols.
+    task4: Interior Routing (Link-state vs Distance-Vecture).
+    task5: Internet Topology & Exterior Routing Protocols.
+    task6: Transport Layer Protocols.
+    task7: Congestion Control & Prevention & Queueing Mechanisms.
+    task8: Middleware (Caching, Firewalls, etc.).
+    task9: Application Layer Protocols.
+    task10: Software Defined Networks.
+    task11: Network Security.
+- name: Database System Technology
+  code: CSCD43
+  taught: University of Toronto
+  description:
+    task1: Buffer Management.
+    task2: Record and File Structuring.
+    task3: Indexes.
+    task4: External Sorting.
+    task5: Evaluation of Relational Operators.
+    task6: Relation Query Optimizers.
+    task7: Concurrency Control
+    task8: Crash Recovery

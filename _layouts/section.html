@@ -8,18 +8,20 @@ layout: default
     </ol>
 </nav>
 
-<h1 class="text-center mt-3">{{page.section}}</h1> <!-- need to make this a hyperlinked name for section page with all posts-->
+<h1 class="text-center mt-3">{{page.section}}</h1>
 
-<div class="card-deck mx-3">
+<div class="row row-cols-1 row-cols-md-2 g-4 p-4">
     {% assign sectionPosts = site.posts | where: "topic", page.section %}
     {% for post in sectionPosts %}
-    <div class="card">
-        <div class="card-body">
-            <a href={{post.url}}><h4 class="card-title">{{post.title}}</h4></a>
-            <p>{{post.excerpt | truncatewords: 75}}</p>
-        </div>
-        <div class="card-footer">
-            <small class="text-muted">{{post.date | date: "%a, %b %d, %y"}}</small>
+    <div class="col mb-2">
+        <div class="card">
+            <div class="card-body">
+                <a href={{post.url}}><h4 class="card-title">{{post.title}}</h4></a>
+                <p>{{post.excerpt | truncatewords: 75}}</p>
+            </div>
+            <div class="card-footer">
+                <small class="text-muted">{{post.date | date: "%a, %b %d, %y"}}</small>
+            </div>
         </div>
     </div>
     {% endfor %}
