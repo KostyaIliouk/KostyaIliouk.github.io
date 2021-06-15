@@ -6,7 +6,7 @@ title: Blog
 <h1 class="text-center mt-4"> Kostya's Random Ramblings</h1>
 
 <div class="pl-3">
-    <h2>New Posts</h2>
+    <h2 class="m-2">New Posts</h2>
 </div>
 
 {% include newPosts.html %}
@@ -18,9 +18,9 @@ title: Blog
     {% capture link %}{{section.name | downcase | replace: " ", ""}}.html{% endcapture %}
     <a href= {{link}} ><h2>{{section.name}}</h2></a>
 </div>
-<div class="card-deck mx-3">
+<div class="mx-3">
     {% for post in sectionPosts limit:3 %}
-    <div class="card">
+    <div class="card newPostCard m-2">
         <div class="card-body">
             <a href={{post.url}}><h4 class="card-title">{{post.title}}</h4></a>
             <p>{{post.excerpt | truncatewords: 75}}</p>

@@ -1,13 +1,17 @@
-<div class="card-deck mx-3">
-    {% for post in site.posts limit:3 %}
-    <div class="card">
-        <div class="card-body">
-            <a href={{post.url}}><h4 class="card-title">{{post.title}}</h4></a>
-            <p>{{post.excerpt | truncatewords: 75}}</p>
+<div class="bg-light bg-gradient border rounded container-fluid m-2">
+    <div class="row row-cols-1 row-cols-lg-3">
+    {% for post in site.posts limit:6 %}
+        <div>
+            <div class="card m-2 newPostCard">
+                <div class="card-body">
+                    <a href={{post.url}} class="stretched-link"><h4 class="card-title">{{post.title}}</h4></a>
+                    <p>{{post.excerpt | truncatewords: 75}}</p>
+                </div>
+                <div class="card-footer">
+                    <small class="text-muted">{{post.date | date: "%a, %b %d, %y"}}</small>
+                </div>
+            </div>
         </div>
-        <div class="card-footer">
-            <small class="text-muted">{{post.date | date: "%a, %b %d, %y"}}</small>
-        </div>
-    </div>
     {% endfor %}
+    </div>
 </div>
