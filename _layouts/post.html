@@ -4,9 +4,16 @@ layout: default
 <nav aria-label="breadcrumb sticky-top">
     <ol class="breadcrumb">
         <li class="breadcrumb-item"><a href="/blog.html">Blog</a></li>
-        {% capture link%}/{{page.topic | downcase | replace: " ", ""}}.html{% endcapture %}
-        <li class="breadcrumb-item"><a href={{link}}>{{page.topic}}</a></li>
-        <li class="breadcrumb-item active" aria-current="page">{{page.title}}</li>
+        {% for cat in page.categories %}
+        {% if forloop.first %}
+            {% capture link%}/{{cat | downcase | replace: "-", ""}}.html{% endcapture %}
+            <li class="breadcrumb-item"><a href={{link}}>{{cat | capitalize | replace: "-", " "}}</a></li>
+        {% else %}
+            <li class="breadcrumb-item">{{cat | capitalize | replace: "-", " "}}</li>
+        {% endif %}
+        
+        {% endfor %}
+        
     </ol>
 </nav>
 

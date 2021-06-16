@@ -10,19 +10,44 @@ layout: default
 
 <h1 class="text-center mt-3">{{page.section}}</h1>
 
-<div class="row row-cols-1 row-cols-md-2 g-4 p-4">
-    {% assign sectionPosts = site.posts | where: "topic", page.section %}
-    {% for post in sectionPosts %}
-    <div class="col mb-2">
-        <div class="card">
-            <div class="card-body">
-                <a href={{post.url}}><h4 class="card-title">{{post.title}}</h4></a>
-                <p>{{post.excerpt | truncatewords: 75}}</p>
+{% assign sectionMapping = site.data.blogsections | where:"name",page.section %}
+
+
+{% if sectionMapping[0].subsection %}
+    {% for subsection in sectionMapping[0].subsection %}
+        {% assign sectionPosts = site.categories[subsection.cat]%}
+        <h2 class="text-center mt-3">{{subsection.name}}</h2>
+        {% if sectionPosts %}
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4">
+            {% for post in sectionPosts %}
+                <div><div class="card postCard m-2">
+                    <div class="card-body">
+                        <a href={{post.url}}><h4 class="card-title stretched-link">{{post.title}}</h4></a>
+                        <p>{{post.excerpt | truncatewords: 75}}</p>
+                    </div>
+                    <div class="card-footer">
+                        <small class="text-muted">{{post.date | date: "%a, %b %d, %y"}}</small>
+                    </div>
+                </div></div>
+            {% endfor %}
             </div>
-            <div class="card-footer">
-                <small class="text-muted">{{post.date | date: "%a, %b %d, %y"}}</small>
-            </div>
-        </div>
-    </div>
+        {% endif %}
     {% endfor %}
-</div>
+{% else %}
+    {% assign section = sectionMapping[0].cat%}
+    {% assign sectionPosts = site.categories[section] %}
+
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4 p-4">
+            {% for post in sectionPosts %}
+            <div><div class="card postCard">
+                <div class="card-body">
+                    <a href={{post.url}}><h4 class="card-title stretched-link">{{post.title}}</h4></a>
+                    <p>{{post.excerpt | truncatewords: 75}}</p>
+                </div>
+                <div class="card-footer">
+                    <small class="text-muted">{{post.date | date: "%a, %b %d, %y"}}</small>
+                </div>
+            </div></div>
+            {% endfor %}
+        </div>
+{% endif %}

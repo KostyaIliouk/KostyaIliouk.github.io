@@ -1,3 +1,11 @@
 - name: Web Development
+  cat: web-development
 - name: Random
+  cat: random
 - name: Hack This Site
+  cat: hack-this-site
+  subsection:
+    - name: Realistic
+      cat: realistic
+    - name: Basic
+      cat: basic
