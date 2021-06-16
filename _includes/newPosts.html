@@ -2,7 +2,7 @@
     <div class="row row-cols-1 row-cols-lg-3">
     {% for post in site.posts limit:6 %}
         <div>
-            <div class="card m-2 newPostCard">
+            <div class="card m-2 postCard">
                 <div class="card-body">
                     <a href={{post.url}} class="stretched-link"><h4 class="card-title">{{post.title}}</h4></a>
                     <p>{{post.excerpt | truncatewords: 75}}</p>
