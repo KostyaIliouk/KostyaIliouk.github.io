@@ -6,30 +6,34 @@ title: Blog
 <h1 class="text-center mt-4"> Kostya's Random Ramblings</h1>
 
 <div class="pl-3">
-    <h2>New Posts</h2>
+    <h2 class="m-2">New Posts</h2>
 </div>
 
 {% include newPosts.html %}
 
 {% for section in site.data.blogsections %}
-    {% assign sectionPosts = site.posts | where: "topic", section.name %}
+    {% assign sectionPosts = site.categories[section.cat] %}
     {% if sectionPosts.size > 0 %}
-<div class="pl-3 mt-3">
+<div class="m-2">
     {% capture link %}{{section.name | downcase | replace: " ", ""}}.html{% endcapture %}
     <a href= {{link}} ><h2>{{section.name}}</h2></a>
 </div>
-<div class="card-deck mx-3">
+<div class="bg-light bg-gradient border rounded container-fluid m-2">
+    <div class="row row-cols-1 row-cols-lg-3">
     {% for post in sectionPosts limit:3 %}
-    <div class="card">
-        <div class="card-body">
-            <a href={{post.url}}><h4 class="card-title">{{post.title}}</h4></a>
-            <p>{{post.excerpt | truncatewords: 75}}</p>
-        </div>
-        <div class="card-footer">
-            <small class="text-muted">{{post.date | date: "%a, %b %d, %y"}}</small>
+    <div>
+        <div class="card postCard m-2">
+            <div class="card-body">
+                <a href={{post.url}}><h4 class="card-title stretched-link">{{post.title}}</h4></a>
+                <p>{{post.excerpt | truncatewords: 75}}</p>
+            </div>
+            <div class="card-footer">
+                <small class="text-muted">{{post.date | date: "%a, %b %d, %y"}}</small>
+            </div>
         </div>
     </div>
     {% endfor %}
+</div>
 </div>
     {% endif %}
 {% endfor %}

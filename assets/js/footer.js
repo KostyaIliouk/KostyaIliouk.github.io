@@ -1,12 +1,23 @@
-$(document).ready(function() {
-        var docHeight = $(window).height();
-        var footerHeight = $('#footer').height();
-        var footerTop = $('#footer').position().top + footerHeight;
-        var marginTop = (docHeight - footerTop + 10);
+(function(){
+    "use strict";
 
-        if (footerTop < docHeight)
-            $('#footer').css('margin-top', marginTop + 'px'); // padding of 30 on footer
-        else
-            $('#footer').css('margin-top', '0px');
-        // console.log("docheight: " + docHeight + "\n" + "footerheight: " + footerHeight + "\n" + "footertop: " + footerTop + "\n" + "new docheight: " + $(window).height() + "\n" + "margintop: " + marginTop);
-});
+    window.onresize = () => {
+        fixFooter();
+    };
+
+    window.onload = () => {
+        fixFooter();
+    };
+
+    function fixFooter() {
+        let footerEl = document.getElementById("footer");
+        let viewHeight = window.innerHeight;
+        let footerHeight = footerEl.scrollHeight;
+        let compare = viewHeight - footerHeight;
+        let footerTop =  footerEl.getBoundingClientRect().top;
+        if ((compare > footerTop)){
+            footerEl.style.marginTop = (compare - footerTop).toString() + "px";
+        }
+    }
+    
+})();

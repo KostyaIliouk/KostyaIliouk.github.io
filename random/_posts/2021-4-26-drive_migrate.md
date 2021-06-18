@@ -1,7 +1,6 @@
 ---
 layout: post
 title: Splitting a Dual Booted HDD
-topic: Random
 ---
 
 # Inspiration

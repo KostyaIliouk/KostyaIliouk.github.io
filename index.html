@@ -2,12 +2,36 @@
 layout: default
 title: Home
 ---
-<div id="homeJumbo" class="jumbotron jombotron-fluid">  
-    <h1 class="display-4"> Welcome! </h1>
-    <hr class="my-4">
-    <p class="lead"> ... to my own minute slice of the <a target="_blank" href="/2021/01/04/bowtie.html">bowtie</a> that is the World Wide Web. You will find two main things, a detailed CV of experiences and tools that I have used, as well as, a blog of random tidbits that I have found interesting. </p>
+<div class="container-fluid">
+
+    <div class="row row-cols-1 row-cols-lg-2">
+
+        <div class="col-md-4 col-lg-3">
+            <div class="border border-3 rounded m-2 p-2 bg-light bg-gradient">
+                <img class="w-100" src="assets/images/home/headshot.JPG" alt="Image of Kanstantsin Ilioukevitch">
+            </div>
+            <div class="border border-3 rounded text-wrap m-2 p-2">
+                <h4>Kanstantsin Ilioukevitch HBSc.</h4>
+                <p><span class="iconify" data-icon="carbon:email" data-inline="false"></span>: kostya.iliouk [at] gmail.com</p>
+                <p><span class="iconify" data-icon="akar-icons:github-fill" data-inline="false"></span>: <a href="https://github.com/KostyaIliouk" target="_blank">github.com/KostyaIliouk</a></p>
+            </div>
+        </div>
+
+        <div class="col-md-8 col-lg-9">
+            <div class="bg-light bg-gradient p-4 m-2 container-fluid border rounded">  
+                <div class="row">
+                    <h1 class="text-center"> Welcome! </h1>
+                </div>
+                <hr class="my-4">
+                <div class="row">
+                    <p class="lead"> ... to my own minute slice of the <a target="_blank" href="/2021/01/04/bowtie.html">bowtie</a> that is the World Wide Web. You will find two main things, a detailed CV of experiences and tools that I have used, as well as, a blog of random tidbits that I have found interesting. </p>
+                </div>
+            </div>
+                
+            <h2 class="text-center m-2">Interested in some reading? Check out my new blog posts!</h2>
+            
+            {% include newPosts.html %}
+        </div>
+
+    </div>
 </div>
-
-<h2 class="text-center mb-3">Interested in some reading? Check out my new blog posts!</h2>
-
-{% include newPosts.html %}

@@ -109,7 +109,7 @@ defaultIcon: <span class="iconify" data-icon="bi:x-circle" data-inline="false"><
             {% for item in site.data.tools %}
             <div class="card mx-5">
                 <div class="card-header text-center" id="heading{{ forloop.index }}">
-                    {% if item.framework == true %}<button class="btn btn-link btn-block collapsed p-0" type="button" data-toggle="collapse" data-target="#collapse{{ forloop.index }}" aria-expanded="false" aria-controls="collapse{{ forloop.index }}">{% endif%}
+                    {% if item.framework == true %}<button class="btn btn-link collapsed p-0 w-100" type="button" data-bs-toggle="collapse" data-bs-target="#collapse{{ forloop.index }}" aria-expanded="false" aria-controls="collapse{{ forloop.index }}">{% endif%}
                     <div class="row">
                         <div class="col-sm">
                             {% if item.icon != "n/a" %}
@@ -168,14 +168,14 @@ defaultIcon: <span class="iconify" data-icon="bi:x-circle" data-inline="false"><
         <div class="container justify-content-center">
             {% for item in site.data.workexperience %}
             <div class="row">
-                <div class="card mb-4">
+                <div class="card mb-4 p-0">
                     <div class="card-header">
                         <h3 class="card-title text-center">{{ item.employer }}</h3>
                         <div class="row">
                             <div class="col-sm">
                                 {{ item.department }}
                             </div>
-                            <div class="col-sm text-right">
+                            <div class="col-sm text-end">
                                 {{ item.team }}
                             </div>
                         </div>
@@ -184,7 +184,7 @@ defaultIcon: <span class="iconify" data-icon="bi:x-circle" data-inline="false"><
                             <div class="col-sm">
                                 Manager: {{ item.manager.name }}
                             </div>
-                            <div class="col-sm text-right">
+                            <div class="col-sm text-end">
                                 {% if item.manager.email != 'n/a' %}
                                 Email: {{ item.manager.email }}
                                 {% endif %}
@@ -194,7 +194,7 @@ defaultIcon: <span class="iconify" data-icon="bi:x-circle" data-inline="false"><
                             <div class="col-sm">
                                 {{ item.rolename }}
                             </div>
-                            <div class="col-sm text-right">
+                            <div class="col-sm text-end">
                                 {{ item.date.start }} - {{ item.date.end }}
                             </div>
                         </div>
@@ -227,7 +227,7 @@ defaultIcon: <span class="iconify" data-icon="bi:x-circle" data-inline="false"><
                             <div class="col-sm">
                                 <h5>{{ course.taught }}</h5>
                             </div>
-                            <div class="col-sm text-right">
+                            <div class="col-sm text-end">
                                 <h5>{{ course.code }}</h5>
                             </div>
                         </div>
@@ -259,7 +259,7 @@ defaultIcon: <span class="iconify" data-icon="bi:x-circle" data-inline="false"><
                             <div class="col-sm">
                                 <h3 class="card-title">{{ project.name }}</h3>
                             </div>
-                            <div class="col-sm text-right">
+                            <div class="col-sm text-end">
                                 {% if project.link != "n/a"%}
                                 <a href="{{ project.link }}" target="_blank"><span class="iconify" data-icon="bi:link" data-inline="false"></span></a>
                                 {% endif %}
