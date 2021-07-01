@@ -5,6 +5,10 @@
 - name: Hack This Site
   cat: hack-this-site
   subsection:
+    - name: Programming
+      cat: programming
+    - name: Javascript
+      cat: javascript
     - name: Realistic
       cat: realistic
     - name: Basic
