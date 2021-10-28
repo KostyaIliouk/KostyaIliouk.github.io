@@ -5,6 +5,8 @@ title: The Effects of a Broken Network
 
 “We cannot stop natural disasters but we can arm ourselves with knowledge: so many lives wouldn’t have to be lost if there was enough disaster preparedness.” – Petra Nemcova (4)
 
+The following was written in 2019 for my class at the University of Toronto, Scarborough Campus, CSCC46: Social and Information Networks.
+
 The world has finally begun to act in preventing climate change. Unfortunately, the damage has already been done, and what are defined as natural disasters have seen a dramatic increase within the past 50 or so years (1).
 
 Something that I know for a fact I take for granted, and I’m sure many others do as well, is our infrastructure that we have within Toronto. Such infrastructure includes: our road systems, power grid, drainage systems, sewage system, internet lines, and many more. Thankfully, Toronto is situated in a very key geological region where we do not see many natural disasters such as hurricanes, floods, or forest fires; but many highly densely populated areas of the world are in these danger zones (2).
