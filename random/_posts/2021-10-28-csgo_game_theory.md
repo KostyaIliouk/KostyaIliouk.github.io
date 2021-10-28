@@ -4,6 +4,8 @@ title: CS:GO A ‘Short’ Game Theory Analysis
 ---
 If you’ve ever been interested in any esports, then you most definitely have come across ‘Counter Strike: Global Offensive’ (CS:GO). CS:GO is a very popular first-person shooter, released in 2011 to replace it’s predecessor ‘Counter Strike Source’, with just under 1 million concurrent players worldwide. There are multinational tournaments held with over $8.6 million in prize money released this year.
 
+The following was written in 2019 for my class at the University of Toronto, Scarborough Campus, CSCC46: Social and Information Networks.
+
 With well over 500 competitive teams all over the world, there are many people that make a living off of this esport. Now the question boils down to: what makes a team such as ‘Astralis’, currently the number one ranked team in the world, so successful in what they do? We will be taking a short glance into what a game analyst would need to look at to help teams make quick split second decisions to ensure that they have the best possible outcome for their team.
 
 I will first give a quick rundown of how the game works. Two teams of 5 in-game players each face off for 30 rounds – or more if they tie at 15-15 – where each round lasts 1 minute and 55 seconds. In the first round, each player is awarded $800 to buy armor/utility grenades/weapons to help them win the round. Upon each kill, and outcome of the round, each player is awarded money to use for the following round. The two teams are split as Terrorists and Counter-Terrorists where the objective of the Counter-Terrorists is to hold and defend a ‘site’ – 2 per map – and the objective for Terrorists is to plant a bomb at a ‘site’ and ensure that it goes off before the round ends.
